@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>
+	ONLINE QUIZ
+	</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+
+<style type="text/css">
+section
+{
+margin-top:-20px;
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+	<div class="logo"> ONLINE QUIZ</div>
+	<input type="checkbox" id="click">
+	<label for="click" class="menu-btn">
+		<i class="fas fa-bars"></i>
+	</label>
+		<ul>
+			<li><a class="active" href="index.html">HOME</a></li>
+			<li><a class="active" href="studentlogin.html">LOGIN</a></li>
+			<li><a class="active" href="registration.html">REGISTRATION</a></li>
+			<li><a class="active" href="result.html">RESULT</a></li>
+			<li><a class="active" href="feedback.html">FEEDBACK</a></li>
+		</ul>
+</nav>
+
+<div class="log_img">
+	<div class="box1">
+		<h1 style="color:white;text-align:center; font-size:35px; font-family:Lucida Console;"><b>LOGIN</b></h1>
+		<br>
+		<h1 style="color:white;text-align:center;font-size:20px;">USER LOGIN FORM</h1>
+		<br>
+		<form name="login" action="login.php" method="post">
+			<div class="login">
+			<?php
+				if(isset($_GET['error'])){?>
+				<p class="error"><?php echo $_GET['error']; ?></p>
+				<?php } ?>
+				
+				<h1 style="text-align:center;"><input class="form-control" type="text" name="username" placeholder="Username" required="">
+				</h1><br>
+				<h1 style="text-align:center;"><input class="form-control" type="password" name="password" placeholder="Password" required="">
+				</h1><br>
+				<h3 style="text-align:center;"><input class="btn btn-default" type="submit" name="login" href="start.html" value="LOGIN" style="color:black; 
+				width:100px; height:30px;">
+			</div>
+			<p style="color:white; padding-left:10px; text-align:center;"><br>			
+				<a style="color:yellow; text-decoration:none;" href="updatepassword.html">Forgot Password?</a>&nbsp &nbsp   
+				New to the website?<a style="color:yellow; text-decoration:none;" href="registration.html">SignUp</a>
+			</p>
+		</form>
+	</div>	
+</div>					
+
+
+</body>
+</html>
+
